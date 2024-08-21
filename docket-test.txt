@@ -1,0 +1,9 @@
+createdb gamble-app
+npm run typeorm migration:run
+
+
+
+docker build -t gamble-app .
+{
+    "start": "docker run -p 8000:3000 gamble-app",
+}
