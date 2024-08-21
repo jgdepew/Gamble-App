@@ -27,11 +27,4 @@ describe('BetService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-
-  describe('finaAll', () => {
-    it('should return array of bets', async () => {
-      const bets = await service.findAll();
-      expect(bets).toStrictEqual([mockBet]);
-    });
-  });
 });

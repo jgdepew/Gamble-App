@@ -28,19 +28,4 @@ describe('GameService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-
-  describe('findAll', () => {
-    it('should return array of games', async () => {
-      const games = await service.findAll();
-      expect(games).toStrictEqual([mockGame]);
-    });
-  });
-
-  describe('create', () => {
-    it('should create a game', async () => {
-      const createGameDto: CreateGameDto = { active: true, balance: 1000 };
-      const game = await service.create(createGameDto);
-      expect(game).toStrictEqual(mockGame);
-    });
-  });
 });

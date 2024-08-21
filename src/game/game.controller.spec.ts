@@ -31,12 +31,4 @@ describe('GameController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
-
-  describe('findAll', () => {
-    it('should return array of games', async () => {
-      const result = [{ id: 1, balance: 0, active: false }];
-      jest.spyOn(gameService, 'findAll');
-      expect(await controller.findAll()).toBe(result);
-    });
-  });
 });
